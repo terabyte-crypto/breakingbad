@@ -9,11 +9,12 @@ export const Header = () => {
         fontweight: "bold",
         align: "center",
         display: "flex",
-        justifyContent: "center" 
+        justifyContent: "center", 
+        borderRadius: "10px"
     }
     return (
         <div className="hello" style={headerstyle}>
-            <h2>Breaking Bad</h2>
+            <h1>Breaking Bad</h1>
         </div>
     )
 }

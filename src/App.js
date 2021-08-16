@@ -7,44 +7,42 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  useLocation,
-  useParams
 } from "react-router-dom";
 
 function App() {
   const [characters, setCharac] = useState([]);
+  const [quotes, setQuotes] = useState([]);
 
-  // + adding the use
   useEffect(() => {
     getData();
 
-    // we will use async/await to fetch this data
     async function getData() {
       const response = await fetch("https://www.breakingbadapi.com/api/characters");
-      //console.log(response);
+      const response1 = await fetch("https://www.breakingbadapi.com/api/quotes");
       const data = await response.json();
-      console.log(data);
+      const data1 = await response1.json();
       setCharac(data) ;
+      setQuotes(data1) ;
     }
   }, []);
 
-  let {id} = useParams();
-  console.log(useParams());
+  
 
   return (
     <div>
       <Router>
       <Header/>
       <Switch>
-          <Route exact path="/:id">
-            <Showme chara={characters} chari= {id} />
-          </Route>
+          <Route exact path="/:id" component={() => <Showme chara={characters} quota={quotes} />}/>
+            
+          <div>
           <Route exact path="/">
             {characters && (
-              <div className="characters">
+              <div className="button">
 
                 {characters.map((charac, index) => (
-                  <div className="d-flex" key={index}>
+                  <div className="characters" key={index}>
+
                     <img src={charac.img} alt="" />
                     <Characterization chararr={characters}  charid={charac.char_id}/>
                   </div>
@@ -53,17 +51,9 @@ function App() {
               </div>
             )}
           </Route>
+          </div>
         </Switch>
       </Router>
-
-    {/* <div className="front d-flex">
-            <img src="./Images/Walter_White" alt="" />
-            <img src="./Images/Walter_White" alt="" />
-            <img src="./Images/Walter_White" alt="" />
-            <img src="./Images/Walter_White" alt="" />
-            <img src="./Images/Walter_White" alt="" />
-            <img src="./Images/Walter_White" alt="" />
-        </div> */}
   </div>
   )
 }
