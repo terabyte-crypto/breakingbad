@@ -10,8 +10,8 @@ export const Showme = (props) => {
         <div className="disp">
             {props.chara.map((arr) => (
                 (arr.char_id == id)?
-        
-                <div className="back d-flex">
+                <div className="disp-flex card">
+                <div className="frontflip">
                     <h2>Details</h2>
                     <hr/>
                     <h4>{arr.name}</h4>    
@@ -21,14 +21,17 @@ export const Showme = (props) => {
                     <h4>{arr.nickname}</h4>    
                     <h4>{arr.apprearance}</h4>
                     <br/>
+                </div>    
+                    <div className="backflip">    
                     <h2>Quotes</h2>
-                    <hr/>
+                    <br/>
                     <>
                     {props.quota.map((e) => (
                         (arr.name == e.author)?
                             <h4>{e.quote}<br/></h4>:""
                     ))}
-                    </>    
+                    </>
+                </div>
                 </div>:""
         ))}     
         </div>

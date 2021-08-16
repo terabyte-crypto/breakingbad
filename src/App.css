@@ -51,21 +51,16 @@ img{
   justify-content: space-around;
   flex-basis: 33.33333%;
 }
-
-.back{
-  margin : 10px;
-  padding: 5px;
-  text-align: center;
-  font-family: 'Style Script', cursive;  
-  font-weight: bolder;
-  color: white;
-  background-color: #6f94b3;
-  border-radius: 20px;
+.disp-flex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
 .disp{
   margin: 100px;
-  padding: 100px;
+  padding: 50px;
 }
 .card{
   position: relative;
@@ -78,33 +73,36 @@ img{
   transition: all 0.8s ease;
 }
 
-.card:active{
+.card:hover{
   transform: rotateY(180deg);
 }
 
 .frontflip{
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
+  margin : 10px;
+  padding: 5px;
+  text-align: center;
+  font-family: 'Style Script', cursive;  
+  font-weight: bolder;
+  color: white;
+  background-color: #6f94b3;
+  border-radius: 20px;
   backface-visibility: hidden;
   overflow: hidden;
 }
 
 .backflip{
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
+  margin : 10px;
+  padding: 5px;
+  text-align: center;
+  font-family: 'Style Script', cursive;  
+  font-weight: bolder;
+  color: white;
+  background-color: #6f94b3;
+  border-radius: 20px;
   backface-visibility: hidden;
   overflow: hidden;
-  background: #fafafa;
-  color: #333;
-  text-align: center;
   transform: rotateY(180deg);
 }
 
