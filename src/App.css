@@ -38,8 +38,8 @@
 }
 
 img{
-  height: 250px;
-  width: 250px;
+  height: 300px;
+  width: 300px;
   margin: 10px;
   padding: 5px;
 }
@@ -107,12 +107,36 @@ img{
 }
 
 .button{
-  margin: 10px;
+  margin: 40px;
   padding: 5px;
   text-align: center;
   display: flex;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  flex: 1 0 33.3333%
+  flex: 1 0 33.3333%;
+  gap: 20px;
+}
+
+.goback{
+  border-radius: 100%;
+}
+
+.Borde{
+  border: 1px solid gainsboro;
+}
+
+.characters{
+  margin: 5px;
+  padding: 3px;
+}
+
+.btn{
+  width: 80%;
+  font-size: 1.5rem;
+}
+
+.radius{
+  width: 50%;
+  border-radius: 50px;
 }

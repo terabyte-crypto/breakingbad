@@ -43,7 +43,7 @@ function App() {
                 {characters.map((charac, index) => (
                   <div className="characters" key={index}>
 
-                    <img src={charac.img} alt="" />
+                    <img className="Borde" src={charac.img} alt="" />
                     <Characterization chararr={characters}  charid={charac.char_id}/>
                   </div>
                 ))}

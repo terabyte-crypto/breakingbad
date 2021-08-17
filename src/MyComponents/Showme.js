@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 export const Showme = (props) => {
 
@@ -31,9 +31,11 @@ export const Showme = (props) => {
                             <h4>{e.quote}<br/></h4>:""
                     ))}
                     </>
+                    <br/>
+                <Link className="goback btn btn-success" to="/" >  Go Back</Link>     
                 </div>
                 </div>:""
-        ))}     
+        ))}
         </div>
     )
 }

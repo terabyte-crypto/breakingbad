@@ -9,6 +9,7 @@ export const Header = () => {
         fontweight: "bold",
         align: "center",
         display: "flex",
+        fontFamily: "'Architects Daughter', cursive",
         justifyContent: "center", 
         borderRadius: "10px"
     }

@@ -5,7 +5,7 @@ export const Characterization = (props) => {
     
     return (
         <div>
-            <Link className="btn btn-success " to= {"/"+props.charid} >View</Link>
+            <Link className="radius btn btn-success " to= {"/"+props.charid} >View</Link>
         </div>
     )
 }
